@@ -1,5 +1,5 @@
 *** Settings ***
-Library  SleniumLibrary
+Library  SeleniumLibrary
 
 *** Test Cases ***
 
