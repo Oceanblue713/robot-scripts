@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 *** Keywords ***
 Search for Products
     Go To   https://www.amazon.com
-    Wait Until Page Contains    Your Amazon.com
+    Wait Until Page Contains    Hello, Sign in
     Input Text      id=twotabsearchtextbox Ferrari 458
     Click Button    id=searchbutton
     Wait Until Page Contains    results for "Ferrari 458"
