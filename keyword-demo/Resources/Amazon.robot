@@ -1,14 +1,17 @@
 *** Settings ***
-Library  SeleniumLibrary
+Resource  ../Resources/PO/LandingPage.robot
+Resource  ../Resources/PO/Cart.robot
+Resource  ../Resources/PO/Product.robot
+Resource  ../Resources/PO/SearchResults.robot
+Resource  ../Resources/PO/Signin.robot
+Resource  ../Resources/PO/TopNav.robot
 
 *** Keywords ***
 Search for Products
-    Go To   https://www.amazon.com
-    Wait Until Page Contains    Hello, Sign in
-    Input Text      id=twotabsearchtextbox Ferrari 458
-    Click Button    id=searchbutton
-    Wait Until Page Contains    results for "Ferrari 458"
-
+    LandingPage.Load
+    LandingPage.Verify Page Loaded
+    Product.Input Product
+    Product.Click The Search Button
 
 Select Product from Search Results
     Click Link      css=div:nth-of-type(4)  .celwidget.slot\=MAIN.template\=SEARCH_RESULTS.widgetId\=search-results .a-link-
