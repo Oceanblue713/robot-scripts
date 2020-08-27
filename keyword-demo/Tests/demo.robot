@@ -5,13 +5,12 @@ Resource  ../Resources/Common.Robot
 Test Setup  Begin Web Test
 Test Teardown  End Web Test
 
+*** Variables ***
+${BROWSER} =  firefox
+${START_URL} =  https://www.amazon.com
+${SEARCH_TERM} =  kitsune udon
+
 *** Test Cases ***
-User can search for products
-    [Documentation]   This is some basic info about the test
-    [Tags]  Smoke
-
-    Amazon.Search for Products
-
 User must sign in to check out
     [Documentation]   This is some basic info about the test
     [Tags]  Smoke

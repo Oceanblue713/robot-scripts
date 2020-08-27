@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on darwin)" generated="20200825 21:33:47.211" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on darwin)" generated="20200827 21:09:27.639" rpa="false">
 <suite id="s1" name="Demo" source="/Users/anrisawada/20projects/robot-scripts/keyword-demo/Tests/demo.robot">
-<test id="s1-t1" name="User can search for products">
+<test id="s1-t1" name="User must sign in to check out">
 <kw name="Begin Web Test" library="Common" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>firefox</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200825 21:33:47.505" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20200825 21:33:47.507" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/keyword-demo/Results/geckodriver-17.log</msg>
-<status status="PASS" starttime="20200825 21:33:47.505" endtime="20200825 21:33:50.536"></status>
+<msg timestamp="20200827 21:09:27.938" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20200827 21:09:27.939" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/keyword-demo/Results/geckodriver-2.log</msg>
+<status status="PASS" starttime="20200827 21:09:27.937" endtime="20200827 21:09:31.935"></status>
 </kw>
-<status status="PASS" starttime="20200825 21:33:47.504" endtime="20200825 21:33:50.536"></status>
+<status status="PASS" starttime="20200827 21:09:27.937" endtime="20200827 21:09:31.938"></status>
 </kw>
 <kw name="Search for Products" library="Amazon">
 <kw name="Load" library="LandingPage">
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
-<arg>https://www.amazon.com</arg>
+<arg>${START_URL}</arg>
 </arguments>
-<msg timestamp="20200825 21:33:50.539" level="INFO">Opening url 'https://www.amazon.com'</msg>
-<status status="PASS" starttime="20200825 21:33:50.538" endtime="20200825 21:33:55.667"></status>
+<msg timestamp="20200827 21:09:31.951" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<status status="PASS" starttime="20200827 21:09:31.944" endtime="20200827 21:09:33.238"></status>
 </kw>
-<status status="PASS" starttime="20200825 21:33:50.538" endtime="20200825 21:33:55.667"></status>
+<status status="PASS" starttime="20200827 21:09:31.943" endtime="20200827 21:09:33.239"></status>
 </kw>
 <kw name="Verify Page Loaded" library="LandingPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -33,21 +33,21 @@
 <arguments>
 <arg>Hello, Sign in</arg>
 </arguments>
-<status status="PASS" starttime="20200825 21:33:55.668" endtime="20200825 21:33:55.866"></status>
+<status status="PASS" starttime="20200827 21:09:33.239" endtime="20200827 21:09:33.447"></status>
 </kw>
-<status status="PASS" starttime="20200825 21:33:55.667" endtime="20200825 21:33:55.867"></status>
+<status status="PASS" starttime="20200827 21:09:33.239" endtime="20200827 21:09:33.448"></status>
 </kw>
 <kw name="Input Product" library="Product">
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>twotabsearchtextbox</arg>
-<arg>Ferrari 458</arg>
+<arg>${SEARCH_TERM}</arg>
 </arguments>
-<msg timestamp="20200825 21:33:55.868" level="INFO">Typing text 'Ferrari 458' into text field 'twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20200825 21:33:55.868" endtime="20200825 21:33:56.222"></status>
+<msg timestamp="20200827 21:09:33.449" level="INFO">Typing text 'kitsune udon' into text field 'twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20200827 21:09:33.449" endtime="20200827 21:09:33.948"></status>
 </kw>
-<status status="PASS" starttime="20200825 21:33:55.867" endtime="20200825 21:33:56.223"></status>
+<status status="PASS" starttime="20200827 21:09:33.448" endtime="20200827 21:09:33.948"></status>
 </kw>
 <kw name="Click The Search Button" library="Product">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -55,151 +55,101 @@
 <arguments>
 <arg>xpath=//div[@id='nav-search']/form[@role='search']//div[@class='nav-search-submit nav-sprite']</arg>
 </arguments>
-<msg timestamp="20200825 21:33:56.225" level="INFO">Clicking element 'xpath=//div[@id='nav-search']/form[@role='search']//div[@class='nav-search-submit nav-sprite']'.</msg>
-<status status="PASS" starttime="20200825 21:33:56.224" endtime="20200825 21:33:59.193"></status>
+<msg timestamp="20200827 21:09:33.949" level="INFO">Clicking element 'xpath=//div[@id='nav-search']/form[@role='search']//div[@class='nav-search-submit nav-sprite']'.</msg>
+<status status="PASS" starttime="20200827 21:09:33.949" endtime="20200827 21:09:37.031"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
-<arg>results for "Ferrari 458"</arg>
+<arg>results for "kitsune udon"</arg>
 </arguments>
-<status status="PASS" starttime="20200825 21:33:59.193" endtime="20200825 21:33:59.270"></status>
+<status status="PASS" starttime="20200827 21:09:37.032" endtime="20200827 21:09:37.067"></status>
 </kw>
-<status status="PASS" starttime="20200825 21:33:56.223" endtime="20200825 21:33:59.270"></status>
+<status status="PASS" starttime="20200827 21:09:33.948" endtime="20200827 21:09:37.067"></status>
 </kw>
-<status status="PASS" starttime="20200825 21:33:50.537" endtime="20200825 21:33:59.271"></status>
-</kw>
-<kw name="End Web Test" library="Common" type="teardown">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200825 21:33:59.271" endtime="20200825 21:34:00.082"></status>
-</kw>
-<status status="PASS" starttime="20200825 21:33:59.271" endtime="20200825 21:34:00.082"></status>
-</kw>
-<doc>This is some basic info about the test</doc>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="PASS" starttime="20200825 21:33:47.503" endtime="20200825 21:34:00.082" critical="yes"></status>
-</test>
-<test id="s1-t2" name="User must sign in to check out">
-<kw name="Begin Web Test" library="Common" type="setup">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>firefox</arg>
-</arguments>
-<msg timestamp="20200825 21:34:00.084" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20200825 21:34:00.085" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/keyword-demo/Results/geckodriver-18.log</msg>
-<status status="PASS" starttime="20200825 21:34:00.084" endtime="20200825 21:34:03.973"></status>
-</kw>
-<status status="PASS" starttime="20200825 21:34:00.084" endtime="20200825 21:34:03.974"></status>
-</kw>
-<kw name="Search for Products" library="Amazon">
-<kw name="Load" library="LandingPage">
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>https://www.amazon.com</arg>
-</arguments>
-<msg timestamp="20200825 21:34:03.975" level="INFO">Opening url 'https://www.amazon.com'</msg>
-<status status="PASS" starttime="20200825 21:34:03.975" endtime="20200825 21:34:07.365"></status>
-</kw>
-<status status="PASS" starttime="20200825 21:34:03.975" endtime="20200825 21:34:07.365"></status>
-</kw>
-<kw name="Verify Page Loaded" library="LandingPage">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Hello, Sign in</arg>
-</arguments>
-<status status="PASS" starttime="20200825 21:34:07.366" endtime="20200825 21:34:07.813"></status>
-</kw>
-<status status="PASS" starttime="20200825 21:34:07.365" endtime="20200825 21:34:07.813"></status>
-</kw>
-<kw name="Input Product" library="Product">
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>twotabsearchtextbox</arg>
-<arg>Ferrari 458</arg>
-</arguments>
-<msg timestamp="20200825 21:34:07.814" level="INFO">Typing text 'Ferrari 458' into text field 'twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20200825 21:34:07.814" endtime="20200825 21:34:08.286"></status>
-</kw>
-<status status="PASS" starttime="20200825 21:34:07.813" endtime="20200825 21:34:08.287"></status>
-</kw>
-<kw name="Click The Search Button" library="Product">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//div[@id='nav-search']/form[@role='search']//div[@class='nav-search-submit nav-sprite']</arg>
-</arguments>
-<msg timestamp="20200825 21:34:08.288" level="INFO">Clicking element 'xpath=//div[@id='nav-search']/form[@role='search']//div[@class='nav-search-submit nav-sprite']'.</msg>
-<status status="PASS" starttime="20200825 21:34:08.287" endtime="20200825 21:34:10.906"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>results for "Ferrari 458"</arg>
-</arguments>
-<status status="PASS" starttime="20200825 21:34:10.906" endtime="20200825 21:34:11.002"></status>
-</kw>
-<status status="PASS" starttime="20200825 21:34:08.287" endtime="20200825 21:34:11.002"></status>
-</kw>
-<status status="PASS" starttime="20200825 21:34:03.974" endtime="20200825 21:34:11.002"></status>
+<status status="PASS" starttime="20200827 21:09:31.942" endtime="20200827 21:09:37.067"></status>
 </kw>
 <kw name="Select Product from Search Results" library="Amazon">
+<kw name="Select from result page" library="SearchResults">
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>css=div:nth-of-type(4)</arg>
-<arg>.celwidget.slot\=MAIN.template\=SEARCH_RESULTS.widgetId\=search-results .a-link-</arg>
+<arg>link=Maruchan Aka Kitsune Udon Cup, 3.39-Ounce Units (Pack of 12)</arg>
 </arguments>
-<msg timestamp="20200825 21:34:11.004" level="INFO">Clicking ['link', 'link'] 'css=div:nth-of-type(4)' with .celwidget.slot=MAIN.template=SEARCH_RESULTS.widgetId=search-results .a-link-.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200825 21:34:12.075" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200825 21:34:11.005" endtime="20200825 21:34:12.075"></status>
+<msg timestamp="20200827 21:09:37.069" level="INFO">Clicking link 'link=Maruchan Aka Kitsune Udon Cup, 3.39-Ounce Units (Pack of 12)'.</msg>
+<status status="PASS" starttime="20200827 21:09:37.069" endtime="20200827 21:09:41.366"></status>
 </kw>
-<msg timestamp="20200825 21:34:12.079" level="FAIL">ValueError: '.CELWIDGET.SLOT=MAIN.TEMPLATE=SEARCH_RESULTS.WIDGETID=SEARCH-RESULTS .A-LINK-' modifier does not match to Selenium Keys</msg>
-<status status="FAIL" starttime="20200825 21:34:11.003" endtime="20200825 21:34:12.079"></status>
+<status status="PASS" starttime="20200827 21:09:37.068" endtime="20200827 21:09:41.367"></status>
 </kw>
-<status status="FAIL" starttime="20200825 21:34:11.003" endtime="20200825 21:34:12.080"></status>
+<status status="PASS" starttime="20200827 21:09:37.068" endtime="20200827 21:09:41.367"></status>
+</kw>
+<kw name="Add Product to Cart" library="Amazon">
+<kw name="Add to List" library="Cart">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=wishListMainButton-announce</arg>
+</arguments>
+<msg timestamp="20200827 21:09:41.369" level="INFO">Clicking link 'id=wishListMainButton-announce'.</msg>
+<status status="PASS" starttime="20200827 21:09:41.369" endtime="20200827 21:09:42.909"></status>
+</kw>
+<status status="PASS" starttime="20200827 21:09:41.368" endtime="20200827 21:09:42.909"></status>
+</kw>
+<status status="PASS" starttime="20200827 21:09:41.367" endtime="20200827 21:09:42.909"></status>
+</kw>
+<kw name="Begin Checkout" library="Amazon">
+<kw name="Wait Sign-In title" library="Signin">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Sign-In</arg>
+</arguments>
+<status status="PASS" starttime="20200827 21:09:42.911" endtime="20200827 21:09:42.926"></status>
+</kw>
+<status status="PASS" starttime="20200827 21:09:42.910" endtime="20200827 21:09:42.926"></status>
+</kw>
+<kw name="Click Create Amazon account" library="Signin">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Link=Create your Amazon account</arg>
+</arguments>
+<msg timestamp="20200827 21:09:42.927" level="INFO">Clicking link 'Link=Create your Amazon account'.</msg>
+<status status="PASS" starttime="20200827 21:09:42.927" endtime="20200827 21:09:43.366"></status>
+</kw>
+<status status="PASS" starttime="20200827 21:09:42.927" endtime="20200827 21:09:43.373"></status>
+</kw>
+<status status="PASS" starttime="20200827 21:09:42.910" endtime="20200827 21:09:43.373"></status>
 </kw>
 <kw name="End Web Test" library="Common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200825 21:34:12.081" endtime="20200825 21:34:13.095"></status>
+<status status="PASS" starttime="20200827 21:09:43.375" endtime="20200827 21:09:44.115"></status>
 </kw>
-<status status="PASS" starttime="20200825 21:34:12.080" endtime="20200825 21:34:13.095"></status>
+<status status="PASS" starttime="20200827 21:09:43.374" endtime="20200827 21:09:44.116"></status>
 </kw>
 <doc>This is some basic info about the test</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="FAIL" starttime="20200825 21:34:00.083" endtime="20200825 21:34:13.095" critical="yes">ValueError: '.CELWIDGET.SLOT=MAIN.TEMPLATE=SEARCH_RESULTS.WIDGETID=SEARCH-RESULTS .A-LINK-' modifier does not match to Selenium Keys</status>
+<status status="PASS" starttime="20200827 21:09:27.936" endtime="20200827 21:09:44.116" critical="yes"></status>
 </test>
 <doc>This is some basic info about the whole suite</doc>
-<status status="FAIL" starttime="20200825 21:33:47.213" endtime="20200825 21:34:13.097"></status>
+<status status="PASS" starttime="20200827 21:09:27.640" endtime="20200827 21:09:44.118"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1">Critical Tests</stat>
-<stat pass="1" fail="1">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1">Smoke</stat>
+<stat pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="1" id="s1" name="Demo">Demo</stat>
+<stat pass="1" fail="0" id="s1" name="Demo">Demo</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200825 21:33:47.495" level="WARN">Imported resource file '/Users/anrisawada/20projects/robot-scripts/keyword-demo/Resources/PO/Cart.robot' is empty.</msg>
-<msg timestamp="20200825 21:33:47.496" level="WARN">Imported resource file '/Users/anrisawada/20projects/robot-scripts/keyword-demo/Resources/PO/SearchResults.robot' is empty.</msg>
-<msg timestamp="20200825 21:33:47.497" level="WARN">Imported resource file '/Users/anrisawada/20projects/robot-scripts/keyword-demo/Resources/PO/Signin.robot' is empty.</msg>
-<msg timestamp="20200825 21:33:47.497" level="WARN">Imported resource file '/Users/anrisawada/20projects/robot-scripts/keyword-demo/Resources/PO/TopNav.robot' is empty.</msg>
+<msg timestamp="20200827 21:09:27.931" level="WARN">Imported resource file '/Users/anrisawada/20projects/robot-scripts/keyword-demo/Resources/PO/TopNav.robot' is empty.</msg>
 </errors>
 </robot>
