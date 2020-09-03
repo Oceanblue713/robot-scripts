@@ -11,16 +11,16 @@ ${START_URL} =  https://www.amazon.com
 ${SEARCH_TERM} =  kitsune udon
 
 *** Test Cases ***
-Logged out user can search for products
+Logged out user should be able to search for products
     [Tags]  Smoke
     Amazon.Search for Products
 
-Logged out user can view a product
+Logged out user should be able to view a product
     [Tags]  Smoke
     Amazon.Search for Products
     Amazon.Select Product from Search Results
 
-Logged out user can add product to a cart
+Logged out user should be able to add product to a cart
     [Documentation]   This is some basic info about the test
     [Tags]  Smoke
 
