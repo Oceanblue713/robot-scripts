@@ -7,6 +7,14 @@ Resource  ../Resources/PO/Signin.robot
 Resource  ../Resources/PO/TopNav.robot
 
 *** Keywords ***
+Login
+    [Arguments]   ${Username}   ${Password}
+    SignIn.Login With Valid Credentials   ${Username}   ${Password}
+
+Login with Invalid Credentials
+    SignIn.Fill "Email" Field     aaa@aa.a
+    SignIn.Click "Continue" Button
+
 Search for Products
     LandingPage.Load
     LandingPage.Verify Page Loaded
