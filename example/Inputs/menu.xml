@@ -30,4 +30,4 @@
         <description>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</description>
         <calories>950</calories>
     </food>
-</breakfast_menu>
+<food><name>Grilled Cheese Sndwich</name><price>$2.95</price><description>Yummy4 melted cheese on grilled sourdough slices</description><calories>300</calories></food></breakfast_menu>
