@@ -19,6 +19,7 @@ Should be able to login
 Logged out user should be able to search for products
     [Tags]  Smoke
     AmazonApp.Search for Products
+    AmazonApp.Do Some Custom Thing
 
 Logged out user should be able to view a product
     [Tags]  Smoke
@@ -29,7 +30,8 @@ Logged out user should be able to add product to a cart
     [Documentation]   This is some basic info about the test
     [Tags]  Smoke
 
-    AmazonApp.Search for Products
+    ${ReturnedInfo} =   AmazonApp.Search for Products
+    Log     ${ReturnedInfo}
     AmazonApp.Select Product from Search Results
     AmazonApp.Add Product to Cart
     AmazonApp.Begin Checkout

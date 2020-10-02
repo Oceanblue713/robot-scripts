@@ -1,4 +1,5 @@
 *** Settings ***
+Library  ../Libraries/MyCustomLibrary.py
 Resource  ../Resources/PO/LandingPage.robot
 Resource  ../Resources/PO/Cart.robot
 Resource  ../Resources/PO/Product.robot
@@ -20,6 +21,8 @@ Search for Products
     LandingPage.Verify Page Loaded
     Product.Input Product
     Product.Click The Search Button
+    ${ReturnInfo} =     SearchResults.Verify Search Completed
+    Log     ${ReturnInfo}
 
 Select Product from Search Results
     SearchResults.Select from result page
@@ -30,3 +33,6 @@ Add Product to Cart
 Begin Checkout
     SignIn.Wait Sign-In title
     SignIn.Click Create Amazon account
+
+Do Some Custom Thing
+    Do Something Special

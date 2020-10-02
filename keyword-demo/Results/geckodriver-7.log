@@ -1,8 +1,0 @@
-1599511062420	geckodriver	INFO	Listening on 127.0.0.1:63919
-1599511062530	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/m9/371mwl655ds7x7ckk1dy76z00000gn/T/rust_mozprofilex8EHRg"
-console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
-1599511067011	Marionette	INFO	Listening on port 63928
-1599511067084	Marionette	WARN	TLS certificate errors will be ignored for this session
-1599511067170	Marionette	INFO	Stopped listening on port 63928
-console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
-console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
