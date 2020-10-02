@@ -1,7 +1,0 @@
-1599511225554	geckodriver	INFO	Listening on 127.0.0.1:64386
-1599511226572	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/m9/371mwl655ds7x7ckk1dy76z00000gn/T/rust_mozprofileDGG7PP"
-console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
-1599511229288	Marionette	INFO	Listening on port 64397
-1599511229306	Marionette	WARN	TLS certificate errors will be ignored for this session
-1599511233992	Marionette	INFO	Stopped listening on port 64397
-JavaScript error: about:srcdoc, line 9: TypeError: parent is null

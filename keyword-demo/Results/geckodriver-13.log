@@ -1,9 +1,0 @@
-1599511234735	geckodriver	INFO	Listening on 127.0.0.1:64474
-1599511235746	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/m9/371mwl655ds7x7ckk1dy76z00000gn/T/rust_mozprofilefm4VCy"
-console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
-1599511238236	Marionette	INFO	Listening on port 64485
-1599511238244	Marionette	WARN	TLS certificate errors will be ignored for this session
-1599511250366	Marionette	INFO	Stopped listening on port 64485
-
-###!!! [Child][MessageChannel] Error: (msgtype=0x3900B2,name=PContent::Msg_StartVisitedQueries) Channel closing: too late to send/recv, messages will be lost
-
