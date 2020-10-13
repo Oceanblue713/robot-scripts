@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 3.2.1 (Python 3.8.5 on darwin)" name="Generator">
+<meta content="Robot Framework 3.2.2 (Python 3.8.5 on darwin)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
@@ -579,11 +579,18 @@ function expandSuite(suite) {
     else
         expandCriticalFailed(suite);
 }
-function expandElement(item) {
+function expandElement(item, retryCount) {
+    retryCount = typeof retryCount !== 'undefined' ? retryCount : 3;
     var element = $('#' + item.id);
     var children = element.children('.children');
     // .css is faster than .show and .show w/ callback is terribly slow
     children.css({'display': 'block'});
+    // in rare cases on large logs concurrent expanding fails => retry
+    if (children.css('display') != 'block' && retryCount > 0) {
+        console.debug('expandElement '+item.id+' failed! planning retry...');
+        setTimeout(function() { expandElement(item, retryCount-1); }, 0);
+        return;
+    }
     populateChildren(item.id, children, item.childrenNames);
     element.children('.element-header').removeClass('closed');
 }
@@ -1743,31 +1750,31 @@ function stopPropagation(event) {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[1,0,68],[],[[5,0,1,0,[6],[1,45,3],[[0,7,8,0,0,0,0,0,[1,45,2],[[0,9,6,0,10,11,12,0,[1,46,1],[],[[46,2,13],[47,2,14]]],[0,15,16,0,17,18,0,0,[1,47,0],[],[[47,2,19]]]],[]]]],[20,0,1,0,[6],[1,48,2],[[0,21,8,0,0,0,0,0,[1,48,2],[[0,22,6,0,23,11,24,0,[1,49,0],[],[[49,2,25]]],[0,26,16,0,27,28,0,0,[1,49,1],[],[]]],[]]]],[29,0,1,0,[6],[1,50,2],[[0,29,8,0,0,0,0,0,[1,51,1],[[0,9,6,0,10,30,31,0,[1,51,0],[],[[51,2,32],[51,2,33]]],[0,15,16,0,17,34,0,0,[1,51,1],[],[[52,2,19]]]],[]]]],[35,0,1,0,[6],[1,52,7],[[0,36,8,0,0,0,0,0,[1,53,1],[[0,37,6,0,38,39,40,0,[1,53,1],[],[[53,2,41]]],[0,42,16,0,43,44,0,0,[1,54,0],[],[]]],[]],[0,45,8,0,0,0,0,0,[1,54,3],[[0,37,6,0,38,46,47,0,[1,55,1],[],[[56,2,48]]],[0,42,16,0,43,49,0,0,[1,56,0],[],[]]],[]],[0,50,8,0,0,0,0,0,[1,57,2],[[0,37,6,0,38,51,52,0,[1,57,1],[],[[58,2,53]]],[0,42,16,0,43,54,0,0,[1,58,1],[],[]]],[]]]],[55,0,1,0,[6],[1,60,5],[[0,56,8,0,0,0,0,0,[1,60,4],[[0,22,6,0,23,11,24,0,[1,61,0],[],[[61,2,57]]],[0,58,6,0,59,60,0,0,[1,61,1],[],[]],[0,58,6,0,59,61,0,0,[1,62,0],[],[]],[0,58,6,0,59,62,0,0,[1,62,1],[],[]],[0,58,6,0,59,63,0,0,[1,63,0],[],[]],[0,58,6,0,59,64,0,0,[1,63,0],[],[]],[0,65,6,0,66,67,0,0,[1,64,0],[],[[64,2,68]]]],[]]]],[69,0,1,0,[6],[1,65,1],[[0,70,8,0,0,0,0,0,[1,65,1],[[0,71,6,0,72,73,0,0,[1,65,1],[],[[66,2,74]]]],[]]]]],[],[6,6,6,6]];
+window.output["suite"] = [1,2,3,0,[],[1,0,8864],[],[[4,0,1,0,[],[1,501,8362],[[0,5,6,0,7,8,0,0,[1,504,5404],[],[[506,2,9],[511,2,10]]],[0,11,6,0,12,13,0,0,[1,5909,1024],[],[[5910,2,14]]],[0,15,16,0,17,18,0,0,[1,6933,1002],[],[[7935,2,19]]],[0,20,6,0,21,0,0,0,[1,7935,927],[],[]]]]],[],[1,1,1,1]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*XML Tests","*/Users/anrisawada/20projects/robot-scripts/example/Tests/XML_Tests.robot","*../Tests/XML_Tests.robot","*<p>These are some XML tests\x3c/p>","*Verify Menu Count","*XML","*Should be one menu in the file","*Breakfast_Menu","*Get Element Count","*<p>Returns and logs how many elements the given <code>xpath\x3c/code> matches.\x3c/p>","*${XML_MENU_PATH}","*${menu_count}","*1 element matched '.'.","*${menu_count} = 1","*Should Be Equal As Numbers","*BuiltIn","*<p>Fails if objects are unequal after converting them to real numbers.\x3c/p>","*${menu_count}, ${EXPECTED_MENU_COUNT}","*Argument types are:\n&lt;class 'int'&gt;\n&lt;type 'unicode'&gt;","*Verify Root","*Verify Menu Name","*Parse Xml","*<p>Parses the given XML file or string into an element structure.\x3c/p>","*${root}","*${root} = &lt;Element 'breakfast_menu' at 0x104cc8b30&gt;","*Should Be Equal","*<p>Fails if the given objects are unequal.\x3c/p>","*${root.tag}, breakfast_menu","*Verify Food Count","*${XML_MENU_PATH}, food","*${food_count}","*5 elements matched 'food'.","*${food_count} = 5","*${food_count}, ${EXPECTED_FOOD_COUNT}","*Verify First Food","*Verify First Food Name","*Get Element","*<p>Returns an element in the <code>source\x3c/code> matching the <code>xpath\x3c/code>.\x3c/p>","*${XML_MENU_PATH}, food[1]/name","*${first_food_name}","*${first_food_name} = &lt;Element 'name' at 0x104ceff40&gt;","*Should Be Equal As Strings","*<p>Fails if objects are unequal after converting them to strings.\x3c/p>","*${first_food_name.text}, Belgian Waffles","*Verify First Food Price","*${XML_MENU_PATH}, food[1]/price","*${first_food_price}","*${first_food_price} = &lt;Element 'price' at 0x104ceff90&gt;","*${first_food_price.text}, $5.95","*Verify First Food Calories","*${XML_MENU_PATH}, food[1]/calories","*${first_food_calories}","*${first_food_calories} = &lt;Element 'calories' at 0x104cef770&gt;","*${first_food_calories.text}, 650","*Add a Food","*Add New Food","*${root} = &lt;Element 'breakfast_menu' at 0x104cefbd0&gt;","*Add Element","*<p>Adds a child element to the specified element.\x3c/p>","*${root}, &lt;food&gt;&lt;/food&gt;","*${root}, &lt;name&gt;Grilled Cheese Sndwich&lt;/name&gt;, xpath=food[6]","*${root}, &lt;price&gt;$2.95&lt;/price&gt;, xpath=food[6]","*${root}, &lt;description&gt;Yummy4 melted cheese on grilled sourdough slices&lt;/description&gt;, xpath=food[6]","*${root}, &lt;calories&gt;300&lt;/calories&gt;, xpath=food[6]","*Save Xml","*<p>Saves the given element to the specified file.\x3c/p>","*${root}, ${XML_MENU_PATH}","eNqlzDsOQEAQANCrbPSMKAW9hFKiHYxY2V9mdnF87qB8zZvHQQletKnoVYPqYNrbbNeGagCYhFgAHWvBGzeEqgzsT1qjAPvFx1xW1uETPWiDIehdSB8tuVQ81mTd/6MB7IoX6+M9WQ==","*Vefiry New Food Was Added","*Verify New Food Exists","*Element Should Exist","*<p>Verifies that one or more element match the given <code>xpath\x3c/code>.\x3c/p>","*${XML_MENU_PATH}, food[6]","*1 element matched 'food[6]'."]);
+window.output["strings"] = window.output["strings"].concat(["*","*Locator","*/Users/anrisawada/20projects/robot-scripts/example/Tests/Locator.robot","*../Tests/Locator.robot","*Should be able to something","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${URL}, ${BROWSER}","*Opening browser 'firefox' to base url '<a href=\"https://shop.lululemon.com/\">https://shop.lululemon.com/\x3c/a>'.","*Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/example/Results/geckodriver-3.log","*Mouse Over","*<p>Simulates hovering the mouse over the element <code>locator\x3c/code>.\x3c/p>","*xpath=//*[@id=\"app\"]/header/nav/div[2]/div[2]/ul/li[1]/a","*Simulating Mouse Over on element 'xpath=//*[@id=\"app\"]/header/nav/div[2]/div[2]/ul/li[1]/a'.","*Sleep","*BuiltIn","*<p>Pauses the test executed for the given time.\x3c/p>","*1s","*Slept 1 second","*Close Browser","*<p>Closes the current browser.\x3c/p>"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:00","fail":0,"label":"Critical Tests","pass":6},{"elapsed":"00:00:00","fail":0,"label":"All Tests","pass":6}],[{"elapsed":"00:00:00","fail":0,"label":"XML","pass":6}],[{"elapsed":"00:00:00","fail":0,"id":"s1","label":"XML Tests","name":"XML Tests","pass":6}]];
+window.output["stats"] = [[{"elapsed":"00:00:08","fail":0,"label":"Critical Tests","pass":1},{"elapsed":"00:00:08","fail":0,"label":"All Tests","pass":1}],[],[{"elapsed":"00:00:09","fail":0,"id":"s1","label":"Locator","name":"Locator","pass":1}]];
 </script>
 <script type="text/javascript">
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1601232931038;
+window.output["baseMillis"] = 1602600441588;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 78;
+window.output["generated"] = 8877;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
 </script>
 <script type="text/javascript">
-window.settings = {"defaultLevel":"DEBUG","minLevel":"DEBUG","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
+window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
 </script>
 <title></title>
 </head>
@@ -1798,12 +1805,12 @@ $(document).ready(function() {
     addErrors();
     addExecutionLog(topsuite);
     addLogLevelSelector(window.settings['minLevel'], window.settings['defaultLevel']);
-    loadAndExpandElementIds(window.output['expand_keywords']);
     if (window.location.hash) {
         makeElementVisible(window.location.hash.substring(1));
     } else {
         expandSuite(topsuite);
     }
+    setTimeout(function () { loadAndExpandElementIds(window.output['expand_keywords']); }, 100);
 });
 
 function addLogLevelSelector(minLevel, defaultLevel) {
