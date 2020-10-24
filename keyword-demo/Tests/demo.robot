@@ -35,3 +35,9 @@ Logged out user should be able to add product to a cart
     AmazonApp.Select Product from Search Results
     AmazonApp.Add Product to Cart
     AmazonApp.Begin Checkout
+
+Should be able to do something
+    Open browser    ${START_URL}    ${BROWSER}
+    #Click Link    xpath=//*[@id="glow-ingress-block"]
+    Click Image    Rubie's Women's Marvel Classic Black Panther Costume, Medium
+    Close Browser
