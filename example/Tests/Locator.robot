@@ -10,5 +10,6 @@ Should be able to something
     Open Browser    ${URL}    ${BROWSER}
 
     Mouse Over    xpath=//*[@id="app"]/header/nav/div[2]/div[2]/ul/li[1]/a
-    Sleep   1s
+    Click Link    Pants
+    Sleep   2s
     Close Browser
