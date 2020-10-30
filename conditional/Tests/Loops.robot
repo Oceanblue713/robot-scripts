@@ -42,6 +42,9 @@ Exit a FOR Loop
 
   LOG   Out of the loop
 
+Repeat a key word many times
+  Repeat Keyword   5   A Repeatable Keyword
+  Repeat Keyword   2 times    A Repeatable Keyword
 
 *** Keywords ***
 Do Something    
@@ -49,4 +52,5 @@ Do Something
   Log    I was passed a value of ${PassedIndex}!
 
 A Repeatable Keyword
+  Log    Repeating
 
