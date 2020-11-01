@@ -1,8 +1,0 @@
-1597731761797	geckodriver	INFO	Listening on 127.0.0.1:56109
-1597731762817	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/m9/371mwl655ds7x7ckk1dy76z00000gn/T/rust_mozprofilexpJ2Oq"
-console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
-1597731765191	Marionette	INFO	Listening on port 56124
-1597731765306	Marionette	WARN	TLS certificate errors will be ignored for this session
-
-###!!! [Parent][MessageChannel] Error: (msgtype=0xD,name=PAPZ::Msg_Destroy) Channel error: cannot send/recv
-
