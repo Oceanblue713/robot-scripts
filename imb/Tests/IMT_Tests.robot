@@ -12,7 +12,8 @@ Test Teardown    Common.End Web Test
 ${ENVIRONMENT} =    dev
 ${BROWSER} =    firefox
 &{URL}    dev=http://dev.internetmillionaireblueprint.com     qa=http://qa.internetmillionaireblueprint.com    prod=http://prod.internetmillionaireblueprint.com    stage=http://stage.internetmillionaireblueprint.com
-
+&{CUSTOMEER_USER}    FirstName=John    LastName=Doe    Dob=1/1/1900    Email=jhon@email.com    Password=password
+&{ADMIN_USER}    FirstName=Joe    LastName=Smith    Dob=1/1/1900    Email=joe@email.com    Password=password
 
 *** Test Case ***
 Should be able to view landing page
@@ -23,4 +24,4 @@ Should be able to view landing page
 Should be able to register for new account
     [Tags]    register
     ImbApp.Navigate to Landing Page 
-    ImbApp.Create New Account    adimn@robot.com    password
+    ImbApp.Create New Account    ${CUSTOMEER_USER}    password
