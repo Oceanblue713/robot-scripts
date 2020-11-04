@@ -9,4 +9,4 @@ Navigate To
     Go To    ${URL.${ENVIRONMENT}}
 
 Verify Page Landed
-    element text should be    ${LANDING_HEADING}    Welcome!
+    wait until page contains element    ${LANDING_HEADING}
