@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.5 on darwin)" generated="20201101 13:01:44.991" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.8.5 on darwin)" generated="20201104 07:38:49.505" rpa="false">
 <suite id="s1" name="IMT Tests" source="/Users/anrisawada/20projects/robot-scripts/imb/Tests/IMT_Tests.robot">
 <test id="s1-t1" name="Should be able to view landing page">
 <kw name="Begin Web Test" library="Common" type="setup">
@@ -9,11 +9,11 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201101 13:01:45.159" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20201101 13:01:45.159" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/imb/Results/geckodriver-7.log</msg>
-<status status="PASS" starttime="20201101 13:01:45.159" endtime="20201101 13:01:47.587"></status>
+<msg timestamp="20201104 07:38:49.913" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201104 07:38:49.914" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/imb/Results/geckodriver-1.log</msg>
+<status status="PASS" starttime="20201104 07:38:49.913" endtime="20201104 07:38:55.271"></status>
 </kw>
-<status status="PASS" starttime="20201101 13:01:45.158" endtime="20201101 13:01:47.588"></status>
+<status status="PASS" starttime="20201104 07:38:49.913" endtime="20201104 07:38:55.271"></status>
 </kw>
 <kw name="Navigate to Landing Page" library="ImbApp">
 <kw name="Navigate To" library="Landing">
@@ -22,49 +22,98 @@
 <arguments>
 <arg>${URL.${ENVIRONMENT}}</arg>
 </arguments>
-<msg timestamp="20201101 13:01:47.589" level="INFO">Opening url 'http://qa.internetmillionaireblueprint.com'</msg>
+<msg timestamp="20201104 07:38:55.274" level="INFO">Opening url 'http://dev.internetmillionaireblueprint.com'</msg>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20201101 13:01:47.978" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201101 13:01:47.716" endtime="20201101 13:01:47.979"></status>
+<msg timestamp="20201104 07:38:55.740" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201104 07:38:55.430" endtime="20201104 07:38:55.740"></status>
 </kw>
-<msg timestamp="20201101 13:01:47.985" level="FAIL">WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=http%3A//qa.internetmillionaireblueprint.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20qa.internetmillionaireblueprint.com.
+<msg timestamp="20201104 07:38:55.746" level="FAIL">WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=http%3A//dev.internetmillionaireblueprint.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20dev.internetmillionaireblueprint.com.
 </msg>
-<status status="FAIL" starttime="20201101 13:01:47.589" endtime="20201101 13:01:47.985"></status>
+<status status="FAIL" starttime="20201104 07:38:55.274" endtime="20201104 07:38:55.746"></status>
 </kw>
-<status status="FAIL" starttime="20201101 13:01:47.588" endtime="20201101 13:01:47.986"></status>
+<status status="FAIL" starttime="20201104 07:38:55.273" endtime="20201104 07:38:55.746"></status>
 </kw>
-<status status="FAIL" starttime="20201101 13:01:47.588" endtime="20201101 13:01:47.986"></status>
+<status status="FAIL" starttime="20201104 07:38:55.272" endtime="20201104 07:38:55.747"></status>
 </kw>
 <kw name="End Web Test" library="Common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201101 13:01:47.987" endtime="20201101 13:01:48.602"></status>
+<status status="PASS" starttime="20201104 07:38:55.749" endtime="20201104 07:38:56.546"></status>
 </kw>
-<status status="PASS" starttime="20201101 13:01:47.986" endtime="20201101 13:01:48.602"></status>
+<status status="PASS" starttime="20201104 07:38:55.748" endtime="20201104 07:38:56.546"></status>
 </kw>
 <tags>
 <tag>landing</tag>
 </tags>
-<status status="FAIL" starttime="20201101 13:01:45.157" endtime="20201101 13:01:48.602" critical="yes">WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=http%3A//qa.internetmillionaireblueprint.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20qa.internetmillionaireblueprint.com.
+<status status="FAIL" starttime="20201104 07:38:49.912" endtime="20201104 07:38:56.546" critical="yes">WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=http%3A//dev.internetmillionaireblueprint.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20dev.internetmillionaireblueprint.com.
 </status>
 </test>
-<status status="FAIL" starttime="20201101 13:01:44.994" endtime="20201101 13:01:48.603"></status>
+<test id="s1-t2" name="Should be able to register for new account">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201104 07:38:56.549" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201104 07:38:56.550" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/imb/Results/geckodriver-2.log</msg>
+<status status="PASS" starttime="20201104 07:38:56.549" endtime="20201104 07:39:00.257"></status>
+</kw>
+<status status="PASS" starttime="20201104 07:38:56.548" endtime="20201104 07:39:00.257"></status>
+</kw>
+<kw name="Navigate to Landing Page" library="ImbApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20201104 07:39:00.262" level="INFO">Opening url 'http://dev.internetmillionaireblueprint.com'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201104 07:39:00.664" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201104 07:39:00.354" endtime="20201104 07:39:00.664"></status>
+</kw>
+<msg timestamp="20201104 07:39:00.664" level="FAIL">WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=http%3A//dev.internetmillionaireblueprint.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20dev.internetmillionaireblueprint.com.
+</msg>
+<status status="FAIL" starttime="20201104 07:39:00.261" endtime="20201104 07:39:00.665"></status>
+</kw>
+<status status="FAIL" starttime="20201104 07:39:00.258" endtime="20201104 07:39:00.665"></status>
+</kw>
+<status status="FAIL" starttime="20201104 07:39:00.258" endtime="20201104 07:39:00.665"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201104 07:39:00.666" endtime="20201104 07:39:01.279"></status>
+</kw>
+<status status="PASS" starttime="20201104 07:39:00.665" endtime="20201104 07:39:01.280"></status>
+</kw>
+<tags>
+<tag>register</tag>
+</tags>
+<status status="FAIL" starttime="20201104 07:38:56.547" endtime="20201104 07:39:01.280" critical="yes">WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=http%3A//dev.internetmillionaireblueprint.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20dev.internetmillionaireblueprint.com.
+</status>
+</test>
+<status status="FAIL" starttime="20201104 07:38:49.512" endtime="20201104 07:39:01.281"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1">Critical Tests</stat>
-<stat pass="0" fail="1">All Tests</stat>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
 </total>
 <tag>
 <stat pass="0" fail="1">landing</stat>
+<stat pass="0" fail="1">register</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="IMT Tests">IMT Tests</stat>
+<stat pass="0" fail="2" id="s1" name="IMT Tests">IMT Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20201101 13:01:45.156" level="WARN">Imported resource file '/Users/anrisawada/20projects/robot-scripts/imb/Resources/PO/TopNav.robot' is empty.</msg>
-<msg timestamp="20201101 13:01:45.156" level="ERROR">Error in file '/Users/anrisawada/20projects/robot-scripts/imb/Resources/ImbApp.robot' on line 5: Resource file 'PO/Register.robot' does not exist.</msg>
+<msg timestamp="20201104 07:38:49.904" level="ERROR">Error in resource file '/Users/anrisawada/20projects/robot-scripts/imb/Resources/ImbApp.robot': Creating keyword 'Create New Account with Invalid Data' failed: Invalid argument specification: Invalid argument syntax '${{UserData}'.</msg>
+<msg timestamp="20201104 07:38:49.907" level="WARN">Imported resource file '/Users/anrisawada/20projects/robot-scripts/imb/Resources/PO/TopNav.robot' is empty.</msg>
 </errors>
 </robot>
