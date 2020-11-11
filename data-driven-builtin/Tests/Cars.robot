@@ -15,3 +15,11 @@ Invalid Login senarios should display correct error message
     ${UNREGISTERED_USER}
     ${INVALID_PASSWORD_USER}
     ${BLANK_CREDENTIALS_USER}
+
+My Test
+    [Template]      My Test Template
+    One    Two      Three       Four
+
+*** Keywords ***
+My Test Template
+    [Arguments]    ${ValueOne}    ${ValueTwo}    ${ValueThree}    ${ValueFour}
