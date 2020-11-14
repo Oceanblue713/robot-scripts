@@ -3,6 +3,7 @@
 Resource    ../Data/InputData.robot
 Resource    ../Resources/Common.robot
 Resource    ../Resources/CarsApp.robot
+Resource    ../Resources/DataManager.robot
 Test Setup    Common.Begin Web Test
 Test Teardown    Common.End Web Test
 
@@ -10,6 +11,10 @@ Test Teardown    Common.End Web Test
 *** Variable ***
 
 *** Test Case ***
+Should see correct error messages with invalid 
+    ${InvalidLoginScenarios} =    DataManager.Get CSV data     ${INVALID_CREDENTIALS_PATH_CSV}
+    
+
 Unregistered user should see correct errormessage at login
     CarsApp.Navigate to Sing In Page
     CarsApp.Attempt Login    ${UNREGISTERED_USER}
