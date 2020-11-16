@@ -13,6 +13,7 @@ Test Teardown    Common.End Web Test
 *** Test Case ***
 Should see correct error messages with invalid 
     ${InvalidLoginScenarios} =    DataManager.Get CSV data     ${INVALID_CREDENTIALS_PATH_CSV}
+    CarsApp.Login With Many Invalid Credentials     ${InvalidLoginScenarios}
     
 
 Unregistered user should see correct errormessage at login
