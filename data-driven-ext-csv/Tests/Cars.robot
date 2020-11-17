@@ -16,17 +16,17 @@ Should see correct error messages with invalid
     CarsApp.Login With Many Invalid Credentials     ${InvalidLoginScenarios}
     
 
-Unregistered user should see correct errormessage at login
-    CarsApp.Navigate to Sing In Page
-    CarsApp.Attempt Login    ${UNREGISTERED_USER}
-    CarsApp.Verify Login Page Error Message    ${UNREGISTERED_USER.ExpectedErrorMessage}
+# Unregistered user should see correct errormessage at login
+#     CarsApp.Navigate to Sing In Page
+#     CarsApp.Attempt Login    ${UNREGISTERED_USER}
+#     CarsApp.Verify Login Page Error Message    ${UNREGISTERED_USER.ExpectedErrorMessage}
 
-Login with invalid password should show correct error Message
-    CarsApp.Navigate to Sing In Page
-    CarsApp.Attempt Login    ${INVALID_PASSWORD_USER}
-    CarsApp.Verify Login Page Error Message    ${INVALID_USER.ExpectedErrorMessage}
+# Login with invalid password should show correct error Message
+#     CarsApp.Navigate to Sing In Page
+#     CarsApp.Attempt Login    ${INVALID_PASSWORD_USER}
+#     CarsApp.Verify Login Page Error Message    ${INVALID_USER.ExpectedErrorMessage}
 
-Login with blank email and password should show correct error Message
-    CarsApp.Navigate to Sing In Page
-    CarsApp.Attempt Login    ${BLANK_CREDENTIALS_USER
-    CarsApp.Verify Login Page Error Message    ${BLANK_CREDENTIALS_USER.ExpectedErrorMessage}
+# Login with blank email and password should show correct error Message
+#     CarsApp.Navigate to Sing In Page
+#     CarsApp.Attempt Login    ${BLANK_CREDENTIALS_USER
+#     CarsApp.Verify Login Page Error Message    ${BLANK_CREDENTIALS_USER.ExpectedErrorMessage}
