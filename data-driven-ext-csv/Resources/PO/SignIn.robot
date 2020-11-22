@@ -13,8 +13,8 @@ Navigate To
 
 Enter credentials
     [Arguments]    ${Credentials}
-    run keyword unless    '${Credentials[0]}' == '#BLANK    Input Text    ${SIGN_IN_EMAIL}    ${Credentials.Email}
-    run keyword unless    '${Credentials[1]}'  == '#BLANK'    Input Text    ${SIGN_IN_PASSWORD}    ${Credentials.Password}
+    run keyword unless    '${Credentials[0]}' == '#BLANK    Input Text    ${SIGN_IN_EMAIL}    ${Credentials[0]}
+    run keyword unless    '${Credentials[1]}'  == '#BLANK'    Input Text    ${SIGN_IN_PASSWORD}    ${Credentials[1]}
 
 Click Submit 
     Click Button    ${LOGIN_SUBMIT_BUTTON}
