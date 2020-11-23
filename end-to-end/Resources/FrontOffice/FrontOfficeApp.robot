@@ -9,7 +9,7 @@ Resource    ./PO/Team.robot
 *** Keywords ***
 Go To Landing Page
     Landing.Navigate To
-    Landing.Verify Page Landed
+    Landing.Verify Page Loaded
 
 Go To "Team" Page
     TopNav.Select "Team" Page
