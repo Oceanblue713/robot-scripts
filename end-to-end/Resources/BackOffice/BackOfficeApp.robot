@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ./PO/Landing.robot
+Resource    ./PO/BackOffice.Landing.robot
 Resource    ./PO/TopNav.robot
 
 
@@ -8,5 +8,5 @@ Resource    ./PO/TopNav.robot
 
 *** Keywords ***
 Go To Landing Page
-    Landing.Navigate To
+    BackOffice.Landing.Navigate To
     # Landing.Verify Page Loaded

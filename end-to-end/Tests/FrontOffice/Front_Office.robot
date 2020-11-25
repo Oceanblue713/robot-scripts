@@ -9,7 +9,7 @@ Test Teardown    CommonWeb.End Web Test
 
 *** Variable ***
 ${BROWSER} =    firefox
-${URL} =    http://www.robotframeworktutorial.com/front-office/
+${FRONT_OFFICE_URL} =    http://www.robotframeworktutorial.com/front-office/
 
 
 *** Test Case ***
