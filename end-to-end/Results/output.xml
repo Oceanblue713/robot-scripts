@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.5 on darwin)" generated="20201127 15:59:31.579" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.8.5 on darwin)" generated="20201128 13:57:47.437" rpa="false">
 <suite id="s1" name="Tests" source="/Users/anrisawada/20projects/robot-scripts/end-to-end/Tests">
 <suite id="s1-s1" name="BackOffice" source="/Users/anrisawada/20projects/robot-scripts/end-to-end/Tests/BackOffice">
 <suite id="s1-s1-s1" name="Back Office" source="/Users/anrisawada/20projects/robot-scripts/end-to-end/Tests/BackOffice/Back_Office.robot">
@@ -11,11 +11,11 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:31.914" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20201127 15:59:31.915" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/end-to-end/Results/geckodriver-3.log</msg>
-<status status="PASS" starttime="20201127 15:59:31.913" endtime="20201127 15:59:34.820"></status>
+<msg timestamp="20201128 13:57:47.749" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201128 13:57:47.751" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/end-to-end/Results/geckodriver-1.log</msg>
+<status status="PASS" starttime="20201128 13:57:47.749" endtime="20201128 13:57:51.573"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:31.913" endtime="20201127 15:59:34.820"></status>
+<status status="PASS" starttime="20201128 13:57:47.748" endtime="20201128 13:57:51.573"></status>
 </kw>
 <kw name="Go To Landing Page" library="BackOfficeApp">
 <kw name="Navigate To" library="BackOffice.Landing">
@@ -24,29 +24,29 @@
 <arguments>
 <arg>${BACK_OFFICE_URL}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:34.823" level="INFO">Opening url 'http://www.robotframeworktutorial.com/back-office'</msg>
-<status status="PASS" starttime="20201127 15:59:34.823" endtime="20201127 15:59:35.698"></status>
+<msg timestamp="20201128 13:57:51.576" level="INFO">Opening url 'http://www.robotframeworktutorial.com/back-office'</msg>
+<status status="PASS" starttime="20201128 13:57:51.576" endtime="20201128 13:57:52.677"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:34.822" endtime="20201127 15:59:35.698"></status>
+<status status="PASS" starttime="20201128 13:57:51.576" endtime="20201128 13:57:52.677"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:34.821" endtime="20201127 15:59:35.698"></status>
+<status status="PASS" starttime="20201128 13:57:51.575" endtime="20201128 13:57:52.677"></status>
 </kw>
 <kw name="End Web Test" library="CommonWeb" type="teardown">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20201127 15:59:35.699" endtime="20201127 15:59:36.899"></status>
+<status status="PASS" starttime="20201128 13:57:52.679" endtime="20201128 13:57:53.787"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:35.699" endtime="20201127 15:59:36.899"></status>
+<status status="PASS" starttime="20201128 13:57:52.678" endtime="20201128 13:57:53.787"></status>
 </kw>
 <doc>This is test 1</doc>
 <tags>
 <tag>test 1</tag>
 </tags>
-<status status="PASS" starttime="20201127 15:59:31.912" endtime="20201127 15:59:36.899" critical="yes"></status>
+<status status="PASS" starttime="20201128 13:57:47.748" endtime="20201128 13:57:53.788" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201127 15:59:31.622" endtime="20201127 15:59:36.900"></status>
+<status status="PASS" starttime="20201128 13:57:47.486" endtime="20201128 13:57:53.789"></status>
 </suite>
-<status status="PASS" starttime="20201127 15:59:31.620" endtime="20201127 15:59:36.903"></status>
+<status status="PASS" starttime="20201128 13:57:47.479" endtime="20201128 13:57:53.793"></status>
 </suite>
 <suite id="s1-s2" name="EndToEnd" source="/Users/anrisawada/20projects/robot-scripts/end-to-end/Tests/EndToEnd">
 <suite id="s1-s2-s1" name="End to End" source="/Users/anrisawada/20projects/robot-scripts/end-to-end/Tests/EndToEnd/End_to_End.robot">
@@ -58,11 +58,11 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:36.932" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20201127 15:59:36.933" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/end-to-end/Results/geckodriver-4.log</msg>
-<status status="PASS" starttime="20201127 15:59:36.932" endtime="20201127 15:59:40.553"></status>
+<msg timestamp="20201128 13:57:53.826" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201128 13:57:53.826" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/end-to-end/Results/geckodriver-2.log</msg>
+<status status="PASS" starttime="20201128 13:57:53.825" endtime="20201128 13:57:57.599"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:36.931" endtime="20201127 15:59:40.554"></status>
+<status status="PASS" starttime="20201128 13:57:53.825" endtime="20201128 13:57:57.599"></status>
 </kw>
 <kw name="Go To Landing Page" library="FrontOfficeApp">
 <kw name="Navigate To" library="FrontOffice.Landing">
@@ -71,10 +71,10 @@
 <arguments>
 <arg>${FRONT_OFFICE_URL}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:40.557" level="INFO">Opening url 'http://www.robotframeworktutorial.com/front-office'</msg>
-<status status="PASS" starttime="20201127 15:59:40.556" endtime="20201127 15:59:42.605"></status>
+<msg timestamp="20201128 13:57:57.601" level="INFO">Opening url 'http://www.robotframeworktutorial.com/front-office'</msg>
+<status status="PASS" starttime="20201128 13:57:57.601" endtime="20201128 13:57:59.202"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:40.556" endtime="20201127 15:59:42.605"></status>
+<status status="PASS" starttime="20201128 13:57:57.600" endtime="20201128 13:57:59.202"></status>
 </kw>
 <kw name="Verify Page Loaded" library="FrontOffice.Landing">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -82,11 +82,11 @@
 <arguments>
 <arg>${LANDING_NAVIGATION_ELEMEMT}</arg>
 </arguments>
-<status status="PASS" starttime="20201127 15:59:42.606" endtime="20201127 15:59:42.613"></status>
+<status status="PASS" starttime="20201128 13:57:59.203" endtime="20201128 13:57:59.211"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:42.606" endtime="20201127 15:59:42.613"></status>
+<status status="PASS" starttime="20201128 13:57:59.202" endtime="20201128 13:57:59.212"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:40.554" endtime="20201127 15:59:42.613"></status>
+<status status="PASS" starttime="20201128 13:57:57.600" endtime="20201128 13:57:59.212"></status>
 </kw>
 <kw name="Go To Landing Page" library="BackOfficeApp">
 <kw name="Navigate To" library="BackOffice.Landing">
@@ -95,30 +95,30 @@
 <arguments>
 <arg>${BACK_OFFICE_URL}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:42.614" level="INFO">Opening url 'http://www.robotframeworktutorial.com/back-office'</msg>
-<status status="PASS" starttime="20201127 15:59:42.614" endtime="20201127 15:59:43.471"></status>
+<msg timestamp="20201128 13:57:59.213" level="INFO">Opening url 'http://www.robotframeworktutorial.com/back-office'</msg>
+<status status="PASS" starttime="20201128 13:57:59.213" endtime="20201128 13:57:59.719"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:42.614" endtime="20201127 15:59:43.471"></status>
+<status status="PASS" starttime="20201128 13:57:59.212" endtime="20201128 13:57:59.719"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:42.613" endtime="20201127 15:59:43.471"></status>
+<status status="PASS" starttime="20201128 13:57:59.212" endtime="20201128 13:57:59.719"></status>
 </kw>
 <kw name="End Web Test" library="CommonWeb" type="teardown">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20201127 15:59:43.473" endtime="20201127 15:59:44.321"></status>
+<status status="PASS" starttime="20201128 13:57:59.721" endtime="20201128 13:58:00.654"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:43.472" endtime="20201127 15:59:44.321"></status>
+<status status="PASS" starttime="20201128 13:57:59.720" endtime="20201128 13:58:00.655"></status>
 </kw>
 <doc>This is test 1</doc>
 <tags>
 <tag>test 1</tag>
 </tags>
-<status status="PASS" starttime="20201127 15:59:36.930" endtime="20201127 15:59:44.321" critical="yes"></status>
+<status status="PASS" starttime="20201128 13:57:53.824" endtime="20201128 13:58:00.655" critical="yes"></status>
 </test>
 <doc>This is end to end suite</doc>
-<status status="PASS" starttime="20201127 15:59:36.908" endtime="20201127 15:59:44.322"></status>
+<status status="PASS" starttime="20201128 13:57:53.799" endtime="20201128 13:58:00.656"></status>
 </suite>
-<status status="PASS" starttime="20201127 15:59:36.904" endtime="20201127 15:59:44.327"></status>
+<status status="PASS" starttime="20201128 13:57:53.795" endtime="20201128 13:58:00.658"></status>
 </suite>
 <suite id="s1-s3" name="FrontOffice" source="/Users/anrisawada/20projects/robot-scripts/end-to-end/Tests/FrontOffice">
 <suite id="s1-s3-s1" name="Front Office" source="/Users/anrisawada/20projects/robot-scripts/end-to-end/Tests/FrontOffice/Front_Office.robot">
@@ -130,11 +130,11 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:44.411" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<msg timestamp="20201127 15:59:44.412" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/end-to-end/Results/geckodriver-5.log</msg>
-<status status="PASS" starttime="20201127 15:59:44.411" endtime="20201127 15:59:48.311"></status>
+<msg timestamp="20201128 13:58:00.677" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20201128 13:58:00.678" level="INFO">Firefox driver log is always forced to to: /Users/anrisawada/20projects/robot-scripts/end-to-end/Results/geckodriver-3.log</msg>
+<status status="PASS" starttime="20201128 13:58:00.676" endtime="20201128 13:58:04.416"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:44.406" endtime="20201127 15:59:48.311"></status>
+<status status="PASS" starttime="20201128 13:58:00.675" endtime="20201128 13:58:04.418"></status>
 </kw>
 <kw name="Go To Landing Page" library="FrontOfficeApp">
 <kw name="Navigate To" library="FrontOffice.Landing">
@@ -143,10 +143,10 @@
 <arguments>
 <arg>${FRONT_OFFICE_URL}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:48.314" level="INFO">Opening url 'http://www.robotframeworktutorial.com/front-office/'</msg>
-<status status="PASS" starttime="20201127 15:59:48.313" endtime="20201127 15:59:49.489"></status>
+<msg timestamp="20201128 13:58:04.421" level="INFO">Opening url 'http://www.robotframeworktutorial.com/front-office'</msg>
+<status status="PASS" starttime="20201128 13:58:04.420" endtime="20201128 13:58:05.808"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:48.313" endtime="20201127 15:59:49.489"></status>
+<status status="PASS" starttime="20201128 13:58:04.420" endtime="20201128 13:58:05.809"></status>
 </kw>
 <kw name="Verify Page Loaded" library="FrontOffice.Landing">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -154,11 +154,11 @@
 <arguments>
 <arg>${LANDING_NAVIGATION_ELEMEMT}</arg>
 </arguments>
-<status status="PASS" starttime="20201127 15:59:49.490" endtime="20201127 15:59:49.498"></status>
+<status status="PASS" starttime="20201128 13:58:05.810" endtime="20201128 13:58:05.817"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:49.489" endtime="20201127 15:59:49.498"></status>
+<status status="PASS" starttime="20201128 13:58:05.809" endtime="20201128 13:58:05.817"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:48.312" endtime="20201127 15:59:49.498"></status>
+<status status="PASS" starttime="20201128 13:58:04.419" endtime="20201128 13:58:05.817"></status>
 </kw>
 <kw name="Go To &quot;Team&quot; Page" library="FrontOfficeApp">
 <kw name="Select &quot;Team&quot; Page" library="TopNav">
@@ -167,57 +167,54 @@
 <arguments>
 <arg>${TOP_NAV_TEAM_LINK}</arg>
 </arguments>
-<msg timestamp="20201127 15:59:49.500" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
-<status status="PASS" starttime="20201127 15:59:49.499" endtime="20201127 15:59:49.752"></status>
+<msg timestamp="20201128 13:58:05.819" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
+<status status="PASS" starttime="20201128 13:58:05.818" endtime="20201128 13:58:06.061"></status>
 </kw>
 <kw name="Sleep 3s">
-<msg timestamp="20201127 15:59:49.760" level="FAIL">No keyword with name 'Sleep 3s' found. Did you mean:
+<msg timestamp="20201128 13:58:06.067" level="FAIL">No keyword with name 'Sleep 3s' found. Did you mean:
     BuiltIn.Sleep</msg>
-<status status="FAIL" starttime="20201127 15:59:49.759" endtime="20201127 15:59:49.760"></status>
+<status status="FAIL" starttime="20201128 13:58:06.067" endtime="20201128 13:58:06.067"></status>
 </kw>
-<status status="FAIL" starttime="20201127 15:59:49.499" endtime="20201127 15:59:49.760"></status>
+<status status="FAIL" starttime="20201128 13:58:05.818" endtime="20201128 13:58:06.067"></status>
 </kw>
-<status status="FAIL" starttime="20201127 15:59:49.499" endtime="20201127 15:59:49.760"></status>
+<status status="FAIL" starttime="20201128 13:58:05.818" endtime="20201128 13:58:06.067"></status>
 </kw>
 <kw name="End Web Test" library="CommonWeb" type="teardown">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20201127 15:59:49.761" endtime="20201127 15:59:50.523"></status>
+<status status="PASS" starttime="20201128 13:58:06.069" endtime="20201128 13:58:06.745"></status>
 </kw>
-<status status="PASS" starttime="20201127 15:59:49.761" endtime="20201127 15:59:50.523"></status>
+<status status="PASS" starttime="20201128 13:58:06.068" endtime="20201128 13:58:06.746"></status>
 </kw>
 <doc>This is test 1</doc>
 <tags>
 <tag>test 1</tag>
 </tags>
-<status status="FAIL" starttime="20201127 15:59:44.397" endtime="20201127 15:59:50.523" critical="yes">No keyword with name 'Sleep 3s' found. Did you mean:
+<status status="FAIL" starttime="20201128 13:58:00.674" endtime="20201128 13:58:06.746" critical="yes">No keyword with name 'Sleep 3s' found. Did you mean:
     BuiltIn.Sleep</status>
 </test>
-<test id="s1-s3-s1-t2" name="&quot;Team&quot; page should match requirements">
-<status status="FAIL" starttime="20201127 15:59:50.524" endtime="20201127 15:59:50.524" critical="yes">Test case contains no keywords.</status>
-</test>
-<status status="FAIL" starttime="20201127 15:59:44.331" endtime="20201127 15:59:50.525"></status>
+<status status="FAIL" starttime="20201128 13:58:00.664" endtime="20201128 13:58:06.747"></status>
 </suite>
-<status status="FAIL" starttime="20201127 15:59:44.328" endtime="20201127 15:59:50.528"></status>
+<status status="FAIL" starttime="20201128 13:58:00.661" endtime="20201128 13:58:06.750"></status>
 </suite>
-<status status="FAIL" starttime="20201127 15:59:31.581" endtime="20201127 15:59:50.531"></status>
+<status status="FAIL" starttime="20201128 13:57:47.439" endtime="20201128 13:58:06.752"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="2">Critical Tests</stat>
-<stat pass="2" fail="2">All Tests</stat>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
 </total>
 <tag>
 <stat pass="2" fail="1">test 1</stat>
 </tag>
 <suite>
-<stat pass="2" fail="2" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="1" id="s1" name="Tests">Tests</stat>
 <stat pass="1" fail="0" id="s1-s1" name="BackOffice">Tests.BackOffice</stat>
 <stat pass="1" fail="0" id="s1-s1-s1" name="Back Office">Tests.BackOffice.Back Office</stat>
 <stat pass="1" fail="0" id="s1-s2" name="EndToEnd">Tests.EndToEnd</stat>
 <stat pass="1" fail="0" id="s1-s2-s1" name="End to End">Tests.EndToEnd.End to End</stat>
-<stat pass="0" fail="2" id="s1-s3" name="FrontOffice">Tests.FrontOffice</stat>
-<stat pass="0" fail="2" id="s1-s3-s1" name="Front Office">Tests.FrontOffice.Front Office</stat>
+<stat pass="0" fail="1" id="s1-s3" name="FrontOffice">Tests.FrontOffice</stat>
+<stat pass="0" fail="1" id="s1-s3-s1" name="Front Office">Tests.FrontOffice.Front Office</stat>
 </suite>
 </statistics>
 <errors>

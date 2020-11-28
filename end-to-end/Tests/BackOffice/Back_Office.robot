@@ -1,16 +1,12 @@
 *** Settings ***
-Documentation    
+Documentation   
+Resource    ../../Data/InputData.robot 
 Resource    ../../Resources/BackOffice/BackOfficeApp.robot
 Resource    ../../Resources/Common/CommonWeb.robot
 Test Setup    CommonWeb.Begin Web Test
 Test Teardown    CommonWeb.End Web Test 
 
 # robot -d Results Tests/BackOffice/back_Office.robot
-
-*** Variable ***
-${BROWSER} =    firefox
-${BACK_OFFICEURL} =    http://www.robotframeworktutorial.com/back-office
-
 
 *** Test Case ***
 Should be able to access "Landing" page
